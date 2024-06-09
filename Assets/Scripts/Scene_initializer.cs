@@ -32,15 +32,25 @@ public class Scene_initializer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initiateGravity(sun, pluton, 50);
-        initiateGravity(sun, neptune, 50);
-        initiateGravity(sun, uranus, 50);
-        initiateGravity(sun, saturn, 50);
-        initiateGravity(sun, jupiter, 50);
-        initiateGravity(sun, mars, 50);
-        initiateGravity(sun, earth, 50);
-        initiateGravity(earth, moon, 3.5f);
-        initiateGravity(sun, venus, 50);
-        initiateGravity(sun, mercure, 50);
+        if (pluton != null)
+            initiateGravity(sun, pluton, 50);
+        if (neptune != null)
+            initiateGravity(sun, neptune, 50);
+        if (uranus != null)
+            initiateGravity(sun, uranus, 50);
+        if (saturn != null)
+            initiateGravity(sun, saturn, 50);
+        if (jupiter != null)
+            initiateGravity(sun, jupiter, 50);
+        if (mars != null)
+            initiateGravity(sun, mars, 50);
+        if (earth != null)
+            initiateGravity(sun, earth, 50);
+        if (moon != null)
+            initiateGravity(earth, moon, 3.5f);
+        if (venus != null)
+            initiateGravity(sun, venus, 50);
+        if (mercure != null)
+            initiateGravity(sun, mercure, 50);
     }
 }
