@@ -8,7 +8,6 @@ public class Scene_initializer : MonoBehaviour
     public GameObject mercure;
     public GameObject venus;
     public GameObject earth;
-    public GameObject moon;
     public GameObject mars;
     public GameObject jupiter;
     public GameObject saturn;
@@ -22,7 +21,6 @@ public class Scene_initializer : MonoBehaviour
         Rigidbody rb = o1.GetComponent<Rigidbody>();
         float R = Vector3.Distance(o1.transform.position, o2.transform.position);
         float speed = Mathf.Sqrt((G * rb.mass) / R);
-        Debug.Log(speed);
         Vector3 force = new Vector3(0, 0, 1);
         force *= speed * speedMult;
         Rigidbody rbSat = o2.GetComponent<Rigidbody>();
@@ -46,11 +44,10 @@ public class Scene_initializer : MonoBehaviour
             initiateGravity(sun, mars, 50);
         if (earth != null)
             initiateGravity(sun, earth, 50);
-        if (moon != null)
-            initiateGravity(earth, moon, 3.5f);
         if (venus != null)
             initiateGravity(sun, venus, 50);
         if (mercure != null)
             initiateGravity(sun, mercure, 50);
+
     }
 }
