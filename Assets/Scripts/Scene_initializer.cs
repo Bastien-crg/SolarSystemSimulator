@@ -8,7 +8,6 @@ public class Scene_initializer : MonoBehaviour
     public GameObject mercure;
     public GameObject venus;
     public GameObject earth;
-    public GameObject moon;
     public GameObject mars;
     public GameObject jupiter;
     public GameObject saturn;
@@ -39,7 +38,6 @@ public class Scene_initializer : MonoBehaviour
         initiateGravity(sun, jupiter, 50);
         initiateGravity(sun, mars, 50);
         initiateGravity(sun, earth, 50);
-        initiateGravity(earth, moon, 3.5f);
         initiateGravity(sun, venus, 50);
         initiateGravity(sun, mercure, 50);
     }
