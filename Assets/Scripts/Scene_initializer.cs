@@ -21,7 +21,6 @@ public class Scene_initializer : MonoBehaviour
         Rigidbody rb = o1.GetComponent<Rigidbody>();
         float R = Vector3.Distance(o1.transform.position, o2.transform.position);
         float speed = Mathf.Sqrt((G * rb.mass) / R);
-        Debug.Log(speed);
         Vector3 force = new Vector3(0, 0, 1);
         force *= speed * speedMult;
         Rigidbody rbSat = o2.GetComponent<Rigidbody>();
